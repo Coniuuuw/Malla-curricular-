@@ -1,1 +1,133 @@
+/* Estilos generales y paleta de colores */
+:root {
+    --color-fondo: #FFF0F5; /* Rosa muy claro (Lavender Blush) */
+    --color-ramo: #FFC0CB; /* Rosa claro (Pink) */
+    --color-ramo-hover: #FFB6C1; /* Rosa un poco más oscuro (LightPink) */
+    --color-aprobado: #90EE90; /* Verde claro (LightGreen) */
+    --color-bloqueado: #D3D3D3; /* Gris claro (LightGray) */
+    --color-texto: #333;
+    --color-texto-blanco: #fff;
+    --color-borde: #DB7093; /* Rosa oscuro (PaleVioletRed) */
+}
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+h1 {
+    color: var(--color-borde);
+    font-size: 2.5em;
+}
+
+/* Contenedor principal de la malla */
+.malla-curricular {
+    display: flex;
+    flex-direction: row; /* Organiza los semestres en columnas */
+    gap: 15px; /* Espacio entre semestres */
+    overflow-x: auto; /* Permite scroll horizontal si no caben */
+    padding-bottom: 20px;
+    width: 100%;
+    justify-content: flex-start; /* Alinea los semestres al inicio */
+}
+
+/* Columna de cada semestre */
+.semestre {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 220px; /* Ancho mínimo de cada semestre */
+    flex-shrink: 0; /* Evita que las columnas se encojan */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre ramos */
+}
+
+.semestre h3 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: var(--color-borde);
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 10px;
+}
+
+/* Estilo de cada ramo */
+.ramo {
+    background-color: var(--color-ramo);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.ramo:hover {
+    background-color: var(--color-ramo-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- ESTADOS DE LOS RAMOS --- */
+
+/* Ramo Aprobado */
+.ramo.aprobado {
+    background-color: var(--color-aprobado);
+    color: var(--color-texto);
+    text-decoration: line-through;
+    border-color: #66CDAA; /* MediumAquaMarine */
+}
+
+.ramo.aprobado:hover {
+    background-color: #89eeb8;
+}
+
+/* Ramo Bloqueado */
+.ramo.bloqueado {
+    background-color: var(--color-bloqueado);
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.ramo.bloqueado:hover {
+    transform: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Diseño responsivo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .malla-curricular {
+        flex-direction: column; /* Cambia a una sola columna */
+        align-items: center; /* Centra los semestres */
+        overflow-x: hidden;
+    }
+
+    .semestre {
+        width: 90%; /* Ocupa casi todo el ancho */
+        min-width: unset;
+    }
+}
