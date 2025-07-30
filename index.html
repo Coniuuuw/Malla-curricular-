@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Interactiva - Enfermería</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <h1>Malla Curricular de Enfermería 🩺</h1>
+        <p>Haz clic en un ramo para marcarlo como aprobado. Los ramos con requisitos se desbloquearán automáticamente.</p>
+    </header>
+
+    <div class="malla-curricular">
+        <div class="semestre">
+            <h3>Semestre I</h3>
+            <div class="ramo" id="enfermeria-profesion-y-disciplina">Enfermería, profesión y disciplina</div>
+            <div class="ramo" id="evolucion-paradigmas-salud">Evolución de los paradigmas en salud</div>
+            <div class="ramo" id="fundamentos-quimicos">Fundamentos químicos para enfermería</div>
+            <div class="ramo" id="fundamentos-biologicos">Fundamentos biológicos para enfermería</div>
+            <div class="ramo" id="morfologia-humana-i">Morfología humana I</div>
+            <div class="ramo" id="primeros-auxilios">Primeros auxilios</div>
+            <div class="ramo" id="ingles-i">Inglés I</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre II</h3>
+            <div class="ramo" id="salud-publica">Salud Pública</div>
+            <div class="ramo" id="comunicacion-interculturalidad" data-requisitos="enfermeria-profesion-y-disciplina">Comunicación e interculturalidad en enfermería</div>
+            <div class="ramo" id="fundamentos-bioquimicos" data-requisitos="fundamentos-quimicos">Fundamentos bioquímicos para enfermería</div>
+            <div class="ramo" id="biomatematica">Biomatematica aplicada a la enfermería</div>
+            <div class="ramo" id="morfologia-humana-ii" data-requisitos="morfologia-humana-i">Morfología humana II</div>
+            <div class="ramo" id="fisiologia-humana" data-requisitos="morfologia-humana-i">Fisiología humana</div>
+            <div class="ramo" id="psicologia-general">Psicología general y evolutiva</div>
+            <div class="ramo" id="ingles-ii">Inglés II</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre III</h3>
+            <div class="ramo" id="cuidados-ciclo-vital-i" data-requisitos="enfermeria-profesion-y-disciplina,psicologia-general">Cuidados en el ciclo vital I</div>
+            <div class="ramo" id="introduccion-investigacion">Introducción a la investigación</div>
+            <div class="ramo" id="fisiopatologia-i" data-requisitos="fisiologia-humana">Fisiopatología para enfermería I</div>
+            <div class="ramo" id="farmacologia-i" data-requisitos="fisiologia-humana,fundamentos-bioquimicos">Farmacología para enfermería I</div>
+            <div class="ramo" id="microbiologia" data-requisitos="fundamentos-biologicos,fundamentos-bioquimicos">Microbiología para enfermería</div>
+            <div class="ramo" id="introduccion-fe">Introducción a la fe</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre IV</h3>
+            <div class="ramo" id="cuidados-ciclo-vital-ii" data-requisitos="cuidados-ciclo-vital-i">Cuidados en el ciclo vital II</div>
+            <div class="ramo" id="paradigmas-investigativos-i" data-requisitos="introduccion-investigacion">Paradigmas y métodos investigativos I</div>
+            <div class="ramo" id="fisiopatologia-ii" data-requisitos="fisiopatologia-i">Fisiopatología para enfermería II</div>
+            <div class="ramo" id="farmacologia-ii" data-requisitos="farmacologia-i">Farmacología para enfermería II</div>
+            <div class="ramo" id="estadistica-aplicada" data-requisitos="biomatematica">Estadística aplicada a la salud</div>
+            <div class="ramo" id="integracion-competencias-i" data-requisitos="cuidados-ciclo-vital-ii">Integración de competencias I</div>
+            <div class="ramo" id="etica-cristiana">Ética cristiana</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre V</h3>
+            <div class="ramo" id="cuidados-mujer-neonato" data-requisitos="cuidados-ciclo-vital-ii">Cuidados en la mujer, neonato, niño y adolescente ambulatorio</div>
+            <div class="ramo" id="paradigmas-investigativos-ii" data-requisitos="paradigmas-investigativos-i">Paradigmas y métodos investigativos II</div>
+            <div class="ramo" id="cuidado-salud-mental" data-requisitos="cuidados-ciclo-vital-ii">Cuidado en salud mental y psiquiatría</div>
+            <div class="ramo" id="gestion-liderazgo">Gestión y liderazgo en enfermería</div>
+            <div class="ramo" id="bioetica-legislacion">Bioetica y legislación en enfermería</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre VI</h3>
+            <div class="ramo" id="cuidado-adulto-ambulatorio" data-requisitos="cuidados-adulto-hospitalizada-i">Cuidado en el adulto y persona mayor ambulatoria</div>
+            <div class="ramo" id="formulacion-proyectos" data-requisitos="paradigmas-investigativos-ii">Formulación de proyectos investigativos en enfermería</div>
+            <div class="ramo" id="cuidados-adulto-hospitalizada-i" data-requisitos="cuidados-ciclo-vital-ii">Cuidados en el adulto y persona mayor hospitalizada I</div>
+            <div class="ramo" id="calidad-planificacion" data-requisitos="gestion-liderazgo">Calidad y planificación en enfermería</div>
+            <div class="ramo" id="certificacion-i">Certificación I</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre VII</h3>
+            <div class="ramo" id="cuidados-adulto-hospitalizado-ii" data-requisitos="cuidados-adulto-hospitalizada-i">Cuidados en el adulto y persona mayor hospitalizado II</div>
+            <div class="ramo" id="seminario-i" data-requisitos="formulacion-proyectos">Seminario I</div>
+            <div class="ramo" id="cuidados-neonato-hospitalizado-i" data-requisitos="cuidados-mujer-neonato">Cuidados en el neonato, niño y adolescente hospitalizado I</div>
+            <div class="ramo" id="enfermeria-comunitaria" data-requisitos="salud-publica">Enfermería en salud comunitaria</div>
+            <div class="ramo" id="electivo-i">Electivo de profundización I</div>
+            <div class="ramo" id="certificacion-ii">Certificación II</div>
+        </div>
+        
+        <div class="semestre">
+            <h3>Semestre VIII</h3>
+            <div class="ramo" id="cuidados-neonato-hospitalizado-ii" data-requisitos="cuidados-neonato-hospitalizado-i">Cuidados en el neonato, niño y adolescente hospitalizado II</div>
+            <div class="ramo" id="seminario-ii" data-requisitos="seminario-i">Seminario II</div>
+            <div class="ramo" id="enfermeria-urgencias" data-requisitos="cuidados-adulto-hospitalizado-ii">Enfermería en urgencias y desastres</div>
+            <div class="ramo" id="gestion-centros-salud">Gestión de centros de salud</div>
+            <div class="ramo" id="integracion-competencias-ii" data-requisitos="seminario-ii,cuidados-neonato-hospitalizado-ii">Integración de competencias II</div>
+            <div class="ramo" id="electivo-ii">Electivo de profundización II</div>
+            <div class="ramo" id="certificacion-iii">Certificación III</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre IX</h3>
+            <div class="ramo" id="gestion-cuidado-i" data-requisitos="gestion-centros-salud">Gestión del cuidado I</div>
+            <div class="ramo" id="electivo-iii">Electivo de profundización III</div>
+        </div>
+
+        <div class="semestre">
+            <h3>Semestre X</h3>
+            <div class="ramo" id="gestion-cuidado-ii" data-requisitos="gestion-cuidado-i">Gestión del cuidado II</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
